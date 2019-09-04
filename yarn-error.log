@@ -1,0 +1,56 @@
+Arguments: 
+  /Users/edz/.nvm/versions/node/v10.10.0/bin/node /Users/edz/.nvm/versions/node/v10.10.0/bin/yarn add url-loader -S
+
+PATH: 
+  /Users/edz/flutter/gradle-4.10.2/bin:/Users/edz/flutter/flutter/bin:/Users/edz/.nvm/versions/node/v10.10.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.15.2
+
+Node version: 
+  10.10.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/Users/edz/Library/Caches/Yarn/v4/npm-isobject-4.0.0-3f1c9155e73b192022a80819bacd0343711697b0/node_modules/isobject/README.md' -> '/Users/edz/learn/react/node_modules/@6thquake/react-material/node_modules/isobject/README.md'
+
+npm manifest: 
+  {
+    "name": "react",
+    "version": "1.0.0",
+    "description": "手动构建react-webpack",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "webpack-dev-server",
+      "build": "webpack --config webpack.config.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@6thquake/react-material": "^0.6.2",
+      "react": "^16.8.6",
+      "react-dom": "^16.8.6",
+      "webpack": "^4.35.2",
+      "webpack-cli": "^3.3.5",
+      "webpack-dev-server": "^3.7.2"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.4.5",
+      "@babel/plugin-transform-runtime": "^7.4.4",
+      "@babel/preset-env": "^7.4.5",
+      "@babel/preset-react": "^7.0.0",
+      "@babel/runtime": "^7.4.5",
+      "babel-loader": "^8.0.6",
+      "html-webpack-plugin": "^3.2.0",
+      "webpack": "^4.35.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

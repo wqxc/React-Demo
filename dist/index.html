@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>react-webpack-demo</title>
+  </head>
+  <body>
+    react-webpack-demo
+    <hr />
+    高堂明镜悲白发, 朝如青丝暮成雪
+
+    <div id="root"></div>
+
+    <script>
+      function Person(name) {
+        console.log("this1", this);
+        this.name = name;
+      }
+      var p = new Person("KOCK");
+      Person.prototype.a = "这是prototype";
+      function Child(child) {
+        console.log("this", this);
+        Person.call(this, child);
+      }
+      var cd = new Child("JHON");
+      console.log("CHild", cd);
+    </script>
+  <script type="text/javascript" src="localhost:8000/main.js"></script></body>
+</html>
