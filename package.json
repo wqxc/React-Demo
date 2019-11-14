@@ -1,6 +1,6 @@
 {
   "name": "react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "手动构建react-webpack",
   "main": "index.js",
   "scripts": {
