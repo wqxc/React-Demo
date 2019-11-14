@@ -7,23 +7,12 @@
   <body>
     react-webpack-demo
     <hr />
-    高堂明镜悲白发, 朝如青丝暮成雪
+    高堂明镜悲白发, 朝如青丝暮成雪, 高堂明镜悲白发, 朝如青丝暮成雪
+
+    <input type="text" id="input1" />
 
     <div id="root"></div>
 
-    <script>
-      function Person(name) {
-        console.log("this1", this);
-        this.name = name;
-      }
-      var p = new Person("KOCK");
-      Person.prototype.a = "这是prototype";
-      function Child(child) {
-        console.log("this", this);
-        Person.call(this, child);
-      }
-      var cd = new Child("JHON");
-      console.log("CHild", cd);
-    </script>
-  <script type="text/javascript" src="localhost:8000/main.js"></script></body>
+    <div id="example"></div>
+  <script type="text/javascript" src="manifest.index.463d2bc3710cbe9c91e2.js"></script><script type="text/javascript" src="testVendor.463d2bc3710cbe9c91e2.js"></script><script type="text/javascript" src="index.463d2bc3710cbe9c91e2.js"></script><script type="text/javascript" src="manifest.jquery.463d2bc3710cbe9c91e2.js"></script><script type="text/javascript" src="jquery.463d2bc3710cbe9c91e2.js"></script></body>
 </html>

@@ -1,15 +1,16 @@
 import React from "react";
-// import ReactDOM from "react-dom";
+import ReactDOM from "react-dom";
 // import { withStyles } from "@6thquake/react-material/styles";
 import Button from "@6thquake/react-material/Button";
 import theme from "../../themes";
 import { withStyles, MuiThemeProvider } from "@6thquake/react-material/styles";
 import src from "../assets/xx.png";
-import jquery from "../jquery.js";
+// import jquery from "../jquery.js";
 import "./index.css";
 import AppDispatcher from "../Flux/dispatcher";
 import * as AppAction from "../Flux/action";
 import AppStore from "../Flux/store";
+import Hello from "../Hello";
 
 const styles = theme => ({
   button: {
@@ -25,6 +26,11 @@ class FluxComponent extends React.Component {
       count: AppStore.getNum()
     };
     this.handleNum = this.handleNum.bind(this);
+    var esca = (
+      <a href="https://baidu.com">
+        <span>5&gt;3{true && "--this is true"}</span>
+      </a>
+    );
   }
 
   componentDidMount() {

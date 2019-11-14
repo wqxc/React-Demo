@@ -5,7 +5,7 @@ import Button from "@6thquake/react-material/Button";
 import theme from "../../themes";
 import { withStyles, MuiThemeProvider } from "@6thquake/react-material/styles";
 import src from "../assets/xx.png";
-import jquery from "../jquery.js";
+// import jquery from "../jquery.js";
 import "./index.css";
 import Store from "../Redux/store";
 import * as Actions from "../Redux/action";

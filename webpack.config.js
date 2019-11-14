@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const webpack = require("webpack");
 // 负责将html文档虚拟到根目录下
@@ -14,13 +15,20 @@ module.exports = {
   // 开发模式
   mode: "development",
   // 配置入口文件
-  entry: ["./src/index.js", "./src/jquery.js"],
+  // entry: {
+  //   index: "./src/index.js",
+  //   jquery: "./src/jquery.js"
+  // },
+  entry: {
+    index: "./src/index.js",
+    jquery: "./src/jquery.js"
+  },
   // 出口文件目录为根目录下dist, 输出的文件名为main
   output: {
     path: path.resolve(__dirname, "dist"),
     // publicPath: "localhost:8000",
-    filename: "main.js",
-    publicPath: "/"
+    filename: "[name].[hash].js"
+    // publicPath: "/"
   },
   // 配置开发服务器, 并配置自动刷新
   devServer: {
@@ -68,5 +76,32 @@ module.exports = {
     ]
   },
   // 装载虚拟目录插件
-  plugins: [htmlWebpackPlugin, new webpack.HotModuleReplacementPlugin()]
+  plugins: [
+    htmlWebpackPlugin,
+    new webpack.HotModuleReplacementPlugin(),
+    new CleanWebpackPlugin()
+  ],
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        common: {
+          chunks: "initial",
+          name: "testCommon", // 打包后的文件名
+          minSize: 0,
+          minChunks: 2 // 重复2次才能打包到此模块
+        },
+        vendor: {
+          priority: 1, // 优先级配置，优先匹配优先级更高的规则，不设置的规则优先级默认为0
+          test: /node_modules/, // 匹配对应文件
+          chunks: "initial",
+          name: "testVendor",
+          minSize: 0,
+          minChunks: 1
+        }
+      }
+    },
+    runtimeChunk: {
+      name: entrypoint => `manifest.${entrypoint.name}`
+    }
+  }
 };
