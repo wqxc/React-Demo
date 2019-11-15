@@ -68,7 +68,7 @@ class WeatherComponent extends React.Component {
             border
             color={"secondary"}
           >
-            计数器减法 计数器减法 计数器减法 计数器减法 TMD
+            计数器减法
           </Button>
           <div>
             <img src={src} alt="" className="image" />
