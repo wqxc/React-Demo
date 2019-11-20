@@ -16,6 +16,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
   }
+  componentDidMount() {
+    var a = "3" == 3;
+    console.log("erararr");
+  }
 
   render() {
     const { classes } = this.props;
